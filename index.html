@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IngresoIA – Directorio de Herramientas de IA 2026</title>
+  <meta name="description" content="El directorio más completo de herramientas de inteligencia artificial en español. Descubre las mejores IAs para ganar dinero, crear contenido y automatizar tu vida en 2026."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --border: #2a2a40;
+      --accent: #7c3aed;
+      --accent2: #06b6d4;
+      --accent3: #f59e0b;
+      --text: #e8e8f0;
+      --muted: #6b6b8a;
+      --green: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* NOISE OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: #a78bfa;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent2);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ADSENSE PLACEHOLDER */
+    .ad-banner {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .ad-placeholder {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* SECTION */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* CATEGORY TABS */
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1.5rem;
+    }
+
+    .tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab.active, .tab:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(124,58,237,0.15);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-emoji {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .card-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .card-category {
+      font-size: 0.72rem;
+      color: var(--accent2);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tag {
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.2);
+      color: #a78bfa;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    .tag.free {
+      background: rgba(16,185,129,0.1);
+      border-color: rgba(16,185,129,0.2);
+      color: #34d399;
+    }
+
+    .tag.paid {
+      background: rgba(245,158,11,0.1);
+      border-color: rgba(245,158,11,0.2);
+      color: #fbbf24;
+    }
+
+    .btn-visit {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-visit:hover { opacity: 0.85; }
+
+    /* AFFILIATE SECTION */
+    .affiliate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .affiliate-card {
+      background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(124,58,237,0.08));
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 16px;
+      padding: 1.4rem;
+      transition: all 0.25s;
+    }
+
+    .affiliate-card:hover {
+      border-color: rgba(245,158,11,0.5);
+      transform: translateY(-2px);
+    }
+
+    .affiliate-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .affiliate-card p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .btn-amazon {
+      display: inline-block;
+      background: #ff9900;
+      color: #0a0a0f;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-amazon:hover { opacity: 0.85; }
+
+    /* NEWS */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .news-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      transition: all 0.25s;
+    }
+
+    .news-card:hover {
+      border-color: rgba(6,182,212,0.4);
+      transform: translateY(-2px);
+    }
+
+    .news-date {
+      font-size: 0.72rem;
+      color: var(--accent2);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .news-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .news-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* YOUTUBE */
+    .yt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .yt-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: all 0.25s;
+    }
+
+    .yt-card:hover {
+      border-color: rgba(255,0,0,0.3);
+      transform: translateY(-2px);
+    }
+
+    .yt-icon { font-size: 1.8rem; }
+
+    .yt-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .yt-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .yt-subs {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .btn-yt {
+      display: inline-block;
+      background: #ff0000;
+      color: white;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      width: fit-content;
+      transition: opacity 0.2s;
+    }
+
+    .btn-yt:hover { opacity: 0.85; }
+
+    /* GUIDE */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .guide-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      transition: all 0.25s;
+    }
+
+    .guide-card:hover {
+      border-color: rgba(16,185,129,0.4);
+      transform: translateY(-2px);
+    }
+
+    .guide-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: rgba(124,58,237,0.3);
+      margin-bottom: 0.5rem;
+    }
+
+    .guide-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .guide-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .stats { gap: 1.5rem; }
+      .grid, .affiliate-grid, .news-grid, .yt-grid, .guide-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">IngresoIA</a>
+    <nav>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#youtube">YouTube</a>
+      <a href="#guias">Guías</a>
+      <a href="#ganar">Ganar $</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="badge">✦ Actualizado Marzo 2026</div>
+  <h1>El directorio de IA<br><span>más completo en español</span></h1>
+  <p>Descubre, compara y usa las mejores herramientas de inteligencia artificial para ganar dinero, crear contenido y automatizar tu vida.</p>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Herramientas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Categorías</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2026</div>
+      <div class="stat-label">Actualizado</div>
+    </div>
+  </div>
+</div>
+
+<!-- AD BANNER -->
+<div class="ad-banner">
+  <div class="ad-placeholder">
+    📢 Espacio publicitario — Google AdSense
+  </div>
+</div>
+
+<!-- CATEGORY TABS -->
+<div class="tabs">
+  <div class="tab active">Todas</div>
+  <div class="tab">Chat IA</div>
+  <div class="tab">Imágenes</div>
+  <div class="tab">Video</div>
+  <div class="tab">Código</div>
+  <div class="tab">Audio/Voz</div>
+  <div class="tab">Productividad</div>
+  <div class="tab">Música</div>
+</div>
+
+<!-- HERRAMIENTAS -->
+<section id="herramientas">
+  <div class="section-header">
+    <span class="section-icon">🤖</span>
+    <h2 class="section-title">Herramientas de IA 2026</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="grid">
+
+    <!-- CHAT / ASISTENTES -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">💬</div>
+        <div>
+          <div class="card-name">ChatGPT</div>
+          <div class="card-category">Asistente IA</div>
+        </div>
+      </div>
+      <p class="card-desc">El asistente de IA más popular del mundo. Escribe contenido, analiza documentos, crea imágenes y genera videos. Modelo GPT-4o disponible en plan gratuito.</p>
+      <div class="card-footer">
+        <span class="tag free">Gratis + Pro</span>
+        <a href="https://chat.openai.com" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">🧠</div>
+        <div>
+          <div class="card-name">Claude (Anthropic)</div>
+          <div class="card-category">Asistente IA</div>
+        </div>
+      </div>
+      <p class="card-desc">Ideal para analizar textos largos, escribir código y automatizar procesos. Claude 4 Sonnet y Opus disponibles. Excelente para documentos complejos.</p>
+      <div class="card-footer">
+        <span class="tag free">Gratis + Pro</span>
+        <a href="https://claude.ai" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">✨</div>
+        <div>
+          <div class="card-name">Gemini (Google)</div>
+          <div class="card-category">Asistente IA</div>
+        </div>
+      </div>
+      <p class="card-desc">La IA de Google integrada con todo el ecosistema: Drive, Gmail, Docs. Ideal para investigación compleja y generación de imágenes con Gemini 2.0 Flash.</p>
+      <div class="card-footer">
+        <span class="tag free">Gratis + Pro</span>
+        <a href="https://gemini.google.com" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">🔍</div>
+        <div>
+          <div class="card-name">Grok (xAI)</div>
+          <div class="card-category">Asistente IA</div>
+        </div>
+      </div>
+      <p class="card-desc">La IA de Elon Musk. Acceso a información en tiempo real de X/Twitter. Verifica hechos, genera imágenes y videos. Grok 3 disponible en 2026.</p>
+      <div class="card-footer">
+        <span class="tag free">Gratis en X</span>
+        <a href="https://grok.com" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">🌊</div>
+        <div>
+          <div class="card-name">DeepSeek</div>
+          <div class="card-category">Asistente IA</div>
+        </div>
+      </div>
+      <p class="card-desc">La IA china que sacudió el mercado. Completamente gratuita, modelo R1 de razonamiento avanzado. Ideal para matemáticas, código y análisis profundos.</p>
+      <div class="card-footer">
+        <span class="tag free">100% Gratis</span>
+        <a href="https://chat.deepseek.com" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">🔎</div>
+        <div>
+          <div class="card-name">Perplexity AI</div>
+          <div class="card-category">Investigación</div>
+        </div>
+      </div>
+      <p class="card-desc">El mejor buscador con IA. Responde preguntas complejas con fuentes verificadas en tiempo real. Ideal para investigación y verificar información.</p>
+      <div class="card-footer">
+        <span class="tag free">Gratis + Pro</span>
+        <a href="https://perplexity.ai" target="_blank" class="btn-visit">Visitar →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <div class="card-emoji">📒</div>
+        <div>
+          <div class="card-name">NotebookLM</div>
+          <div class="card-category">Investigación</di

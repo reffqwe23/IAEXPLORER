@@ -618,14 +618,14 @@
 
 <!-- CATEGORY TABS -->
 <div class="tabs">
-  <div class="tab active">Todas</div>
-  <div class="tab">Chat IA</div>
-  <div class="tab">Imágenes</div>
-  <div class="tab">Video</div>
-  <div class="tab">Código</div>
-  <div class="tab">Audio/Voz</div>
-  <div class="tab">Productividad</div>
-  <div class="tab">Música</div>
+  <div class="tab active" onclick="filterCards(this,'todas')">Todas</div>
+  <div class="tab" onclick="filterCards(this,'chat')">Chat IA</div>
+  <div class="tab" onclick="filterCards(this,'imagenes')">Imágenes</div>
+  <div class="tab" onclick="filterCards(this,'video')">Video</div>
+  <div class="tab" onclick="filterCards(this,'codigo')">Código</div>
+  <div class="tab" onclick="filterCards(this,'audio')">Audio/Voz</div>
+  <div class="tab" onclick="filterCards(this,'productividad')">Productividad</div>
+  <div class="tab" onclick="filterCards(this,'musica')">Música</div>
 </div>
 
 <!-- HERRAMIENTAS -->
@@ -639,7 +639,7 @@
   <div class="grid">
 
     <!-- CHAT / ASISTENTES -->
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">💬</div>
         <div>
@@ -650,11 +650,11 @@
       <p class="card-desc">El asistente de IA más popular del mundo. Escribe contenido, analiza documentos, crea imágenes y genera videos. Modelo GPT-4o disponible en plan gratuito.</p>
       <div class="card-footer">
         <span class="tag free">Gratis + Pro</span>
-        <a href="https://chat.openai.com" target="_blank" class="btn-visit">Visitar →</a>
+        <a href="https://chat.openai.com" class="btn-visit">Visitar →</a>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">🧠</div>
         <div>
@@ -665,11 +665,11 @@
       <p class="card-desc">Ideal para analizar textos largos, escribir código y automatizar procesos. Claude 4 Sonnet y Opus disponibles. Excelente para documentos complejos.</p>
       <div class="card-footer">
         <span class="tag free">Gratis + Pro</span>
-        <a href="https://claude.ai" target="_blank" class="btn-visit">Visitar →</a>
+        <a href="https://claude.ai" class="btn-visit">Visitar →</a>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">✨</div>
         <div>
@@ -680,11 +680,11 @@
       <p class="card-desc">La IA de Google integrada con todo el ecosistema: Drive, Gmail, Docs. Ideal para investigación compleja y generación de imágenes con Gemini 2.0 Flash.</p>
       <div class="card-footer">
         <span class="tag free">Gratis + Pro</span>
-        <a href="https://gemini.google.com" target="_blank" class="btn-visit">Visitar →</a>
+        <a href="https://gemini.google.com" class="btn-visit">Visitar →</a>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">🔍</div>
         <div>
@@ -695,11 +695,11 @@
       <p class="card-desc">La IA de Elon Musk. Acceso a información en tiempo real de X/Twitter. Verifica hechos, genera imágenes y videos. Grok 3 disponible en 2026.</p>
       <div class="card-footer">
         <span class="tag free">Gratis en X</span>
-        <a href="https://grok.com" target="_blank" class="btn-visit">Visitar →</a>
+        <a href="https://grok.com" class="btn-visit">Visitar →</a>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">🌊</div>
         <div>
@@ -710,11 +710,11 @@
       <p class="card-desc">La IA china que sacudió el mercado. Completamente gratuita, modelo R1 de razonamiento avanzado. Ideal para matemáticas, código y análisis profundos.</p>
       <div class="card-footer">
         <span class="tag free">100% Gratis</span>
-        <a href="https://chat.deepseek.com" target="_blank" class="btn-visit">Visitar →</a>
+        <a href="https://chat.deepseek.com" class="btn-visit">Visitar →</a>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-cat="chat">
       <div class="card-top">
         <div class="card-emoji">🔎</div>
         <div>
@@ -725,13 +725,4 @@
       <p class="card-desc">El mejor buscador con IA. Responde preguntas complejas con fuentes verificadas en tiempo real. Ideal para investigación y verificar información.</p>
       <div class="card-footer">
         <span class="tag free">Gratis + Pro</span>
-        <a href="https://perplexity.ai" target="_blank" class="btn-visit">Visitar →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-top">
-        <div class="card-emoji">📒</div>
-        <div>
-          <div class="card-name">NotebookLM</div>
-          <div class="card-category">Investigación</di
+        <a href="https://perplexity.ai" class="btn-visit">Visitar →</a>
